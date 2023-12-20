@@ -11,6 +11,7 @@ import { AiTwotoneLike } from "react-icons/ai";
 import Link from "next/link";
 import { BiTimeFive } from "react-icons/bi";
 import Loader from "../Loader";
+import Comments from "./Comments";
 const Details = () => {
   const router = useRouter();
   const { filmRetrieve, isLoading } = useFilmRetrieve(
@@ -100,6 +101,16 @@ const Details = () => {
             <Style.Torrents>{torrentsList}</Style.Torrents>
           </Style.Description>
         </Style.Data>
+
+        {filmRetrieve != undefined && (
+            <>
+              <Style.CommentsTitle>
+                Comments
+              </Style.CommentsTitle>
+              <Comments PersonKey={filmRetrieve.data.movie.id}/>
+            </>
+
+        )}
       </Style.Content>
     </Style.Details>
   );

@@ -228,4 +228,11 @@ export const Torrents = styled.div`
 `;
 
 
-
+export const CommentsTitle = styled.h2`
+  display: flex;
+  font-size: ${props=> props.theme.textSizeTitle};
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: ${props => props.theme.accentColor1};
+  margin-right: 15px;
+`
