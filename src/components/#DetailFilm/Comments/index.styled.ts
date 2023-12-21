@@ -33,7 +33,7 @@ export const Name = styled.p`
   font-size: ${props=> props.theme.textSizeTextM};
   letter-spacing: 1px;
   font-weight: 600;
-  color: ${props => props.theme.accentColor2};
+  color: ${props => props.theme.accentColor1};
   text-transform: capitalize;
   padding: 0;
   margin: 0;
@@ -55,23 +55,32 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: end;
-  align-items: end;
-  gap:15px;
+    align-items: end;
+    gap:15px;
+    border-radius: 10px;
+    border: 1px solid ${props => props.theme.accentColor1};
 `
 export const Input = styled.textarea`
-  border-radius: 10px;
+  outline: none;
+  border: none;
   min-height: 60px;
-  max-width: 100%;
+  max-width: calc(100% - 40px);
   min-width: -webkit-fill-available;
   max-height: 1200px;
   font-size: ${props=> props.theme.textSizeTextM};
   letter-spacing: 1px;
   font-weight: 600;
-  color: ${props => props.theme.textColor};
+  color: ${props => props.theme.accentColor1};
   text-transform: capitalize;
   padding: 20px;
   margin: 0;
   background: ${props => props.theme.backgroundColor};
+  &:focus {
+    border: none;
+  }
+  &:focus-visible {
+    border: none;
+}
 `
 
 export const ButtonText = styled.button`
@@ -79,16 +88,33 @@ export const ButtonText = styled.button`
 `
 
 export const DeleteButton = styled.button`
-  width: 40px;
-  height: 40px;
-  color: red;
-  background: inherit;
-  border: none;
-  cursor: pointer;
   position: absolute;
   right: 20px;
-  top: 20px;
+  bottom: 20px;
+  margin: 20px 20px 10px;
+  width: 200px;
+  height: 48px;
+  border-radius: 20px;
+  color: ${props => props.theme.textColor};
+  background: ${props => props.theme.red};
+  border: none;
+  cursor: pointer;
   &:hover {
-    text-decoration: underline;
+    background: ${props => props.theme.red2};
+  }
+`
+
+export const SendButton = styled.button`
+
+  margin: 20px 20px 10px;
+  width: 200px;
+  height: 48px;
+  border-radius: 20px;
+  color: ${props => props.theme.textColor};
+  background: ${props => props.theme.accentColor1};
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: ${props => props.theme.accentColor2};
   }
 `

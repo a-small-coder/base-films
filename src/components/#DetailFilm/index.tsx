@@ -25,17 +25,6 @@ const Details = () => {
   const genresList = filmRetrieve?.data.movie.genres.map((value) => {
     return <GenreItem key={value} text={value} />;
   });
-  const torrentsList = filmRetrieve?.data.movie.torrents.map((item, index) => {
-    return (
-      <Torrent
-        key={index}
-        href={item.url}
-        quality={item.quality}
-        type={item.type}
-        size={item.size}
-      />
-    );
-  });
 
   return (
     <Style.Details>
@@ -73,10 +62,6 @@ const Details = () => {
 
             <Style.Genres>{genresList}</Style.Genres>
 
-            <Style.DescriptionFull>
-              {filmRetrieve?.data.movie.description_full}
-            </Style.DescriptionFull>
-
             <Style.Statistic>
               <StatisticItem
                 icon={<VscStarFull />}
@@ -95,12 +80,20 @@ const Details = () => {
                 text={filmRetrieve?.data.movie.download_count}
               ></StatisticItem>
             </Style.Statistic>
-
-            <Style.TorrentsTitle>Downloads:</Style.TorrentsTitle>
-
-            <Style.Torrents>{torrentsList}</Style.Torrents>
           </Style.Description>
         </Style.Data>
+
+        <Style.Title>Description</Style.Title>
+
+        <Style.DescriptionFull>
+          {filmRetrieve?.data.movie.description_full}
+        </Style.DescriptionFull>
+
+        <Style.Title>Summary</Style.Title>
+
+        <Style.DescriptionFull>
+          {filmRetrieve?.data.movie.summary}
+        </Style.DescriptionFull>
 
         {filmRetrieve != undefined && (
             <>

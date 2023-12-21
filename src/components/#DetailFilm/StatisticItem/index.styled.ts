@@ -25,6 +25,7 @@ export const Icon = styled.div`
 
 export const Text = styled.span`
     font-size: ${props => props.theme.textSizeTextM};
+    color: ${props => props.theme.accentColor1};
     @media (max-width: 768px) and (min-width: 576px)  {
         font-size: ${props => props.theme.textSizeTextM700};
     }

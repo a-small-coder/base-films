@@ -24,7 +24,7 @@ const PreviewBox = () => {
                         ut laoreet dolore magna aliquam erat volutpat. Ut wisi enimad minim veniam, 
                         quis nostrud exerci
                 </Style.Desctiption>
-                <a href="/films">
+                <a href="/movies">
                 <Style.Button>
                     start now
                 </Style.Button>

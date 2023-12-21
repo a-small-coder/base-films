@@ -6,7 +6,7 @@ import Pagination from "../Pagination/Pagination";
 
 const Films = () => {
   const [page, setPage] = useState(1);
-  const pageSize = 10;
+  const pageSize = 12;
   const { filmList, isLoading } = useFilmList(String(page), String(pageSize));
 
   const filmsList = filmList?.data.movies.map((film) => {

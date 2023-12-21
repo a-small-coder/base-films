@@ -1,6 +1,5 @@
 'use client'
 
-import Button from "@/components/Button/Button";
 import * as Style from "./index.styled";
 import React, {useEffect, useState} from "react";
 
@@ -41,7 +40,7 @@ export default function Comments(props: {PersonKey: number}){
         if (newComment.length > 0) {
             const newComments: CommentData[] = comments
             newComments.push({
-                name: `user ${comments.length + 1}`,
+                name: `person ${comments.length + 1}`,
                 text: newComment
             })
             localStorage.setItem(commentsStorageKey, JSON.stringify(newComments))
@@ -63,19 +62,26 @@ export default function Comments(props: {PersonKey: number}){
                 />
 
             ))}
+            <Style.User>
+                <Style.MainImg src="https://lens-storage.storage.googleapis.com/png/3dbafa8b03b045f4986c7f5cba0d67b8"></Style.MainImg>
+                <Style.Name>
+                    You are unknown person
+                </Style.Name>
+            </Style.User>
             <Style.Form onSubmit={onCommentSend}>
                 <Style.Input
-                    placeholder={'write your opinion'}
+                    placeholder={'What do mean about this movie?'}
                     value={newComment}
                     onChange={(current) => setNewComment(current.target.value)}
                 >
 
                 </Style.Input>
-                <Button
-                    // type='submit'
+                <Style.SendButton
+                    type='submit'
                     name='send'
-                    action={() => console.log('a')}
-                />
+                >
+                    Send
+                </Style.SendButton>
             </Style.Form>
         </Style.Comments>
     )
@@ -102,7 +108,7 @@ const Comment = (props: CommentProps)=> {
                 {props.text}
             </Style.Text>
             <Style.User>
-                <Style.MainImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaPGE7RlQche2v_ZyjF8FO_wx6oti9nHmL2w&usqp=CAU"></Style.MainImg>
+                <Style.MainImg src="https://lens-storage.storage.googleapis.com/png/3dbafa8b03b045f4986c7f5cba0d67b8"></Style.MainImg>
                 <Style.Name>
                     {props.name}
                 </Style.Name>

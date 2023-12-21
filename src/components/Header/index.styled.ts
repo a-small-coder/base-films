@@ -24,6 +24,7 @@ export const Header = styled.header`
 export const Content = styled.div`
     display: flex;
     align-items: center; 
+    justify-content: space-between;
     width: 100%;
     height: 100%;
     padding: 0px 20px;
@@ -47,27 +48,32 @@ export const Content = styled.div`
     }
 `;
 
-export const Logo = styled.div`
+export const Navbar = styled.div`
     display: flex;
+    justify-content: space-evenly;
     width: 100%;
-    flex: 1 1 auto; 
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 10px 0px;
+    color: ${props => props.theme.accentColor1 };
+    font-family: Segoe UI;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 `;
 
 export const Img = styled.img`
     display: flex;
     height: 30px;
 `;
-export const Name = styled.span`
+export const Name = styled.a`
     display: flex;
     align-items: center;
-    font-size: ${props => props.theme.textSizeTextM};
-    font-weight: 500;
+    font-size: ${props => props.theme.textSizeTitle};
+    color: ${props => props.theme.accentColor1 };
+    font-weight: 700;
     font-family: Roboto;
     letter-spacing: 1px;
-    margin: 5px 0px 0px 0px;
+    margin: 5px 140px 0px 0px;
+    cursor: pointer;
     @media (max-width: 768px) and (min-width: 576px)  {
         font-size: ${props => props.theme.textSizeTextM500};
     }

@@ -51,6 +51,7 @@ export const ContentTitle = styled.span`
     align-items: center;
     box-sizing: border-box;
     font-size: ${props => props.theme.textSizeTitle};
+    color: ${props => props.theme.accentColor1};
     @media (max-width: 768px) and (min-width: 576px)  {
         font-size: ${props => props.theme.textSizeTitle700};
     }
@@ -65,7 +66,7 @@ export const ContentTitle = styled.span`
         transition: 0.3s;
         &:hover{
             transition: 0.3s;
-            color: ${props => props.theme.accentColor1};
+            color: ${props => props.theme.accentColor2};
         }
     }
 `;
@@ -167,6 +168,7 @@ export const Description = styled.div`
 export const Title = styled.div`
     display: flex;
     font-size: ${props=> props.theme.textSizeTitle};
+    color: ${props => props.theme.accentColor1};
     letter-spacing: 1px;
     font-weight: 500;
 `;
@@ -184,6 +186,7 @@ export const Year = styled.div`
 export const DescriptionFull = styled.div`
     display: flex;
     font-size: ${props=> props.theme.textSizeTextM};
+    color: ${props => props.theme.accentColor1};
     line-height: 25px;
     letter-spacing: 1px;
 

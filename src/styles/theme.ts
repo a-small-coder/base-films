@@ -8,6 +8,8 @@ export const darkTheme = {
   accentColor1: `#33317E`,
   accentColor2: "#330031",
   shadowColor: "rgba(0,0,0,0.2)",
+  red: "#B0150B",
+  red2: "#E42B1F",
 
   textSizeTitle: "25px",
   textSizeTitle900: "22px",
@@ -40,6 +42,8 @@ export const lightTheme = {
   accentColor1: `#330031`,
   accentColor2: "#33317E",
   shadowColor: "rgba(0,0,0,0.2)",
+  red: "#B0150B",
+  red2: "#E42B1F",
 
   textSizeTitle: "25px",
   textSizeTitle900: "22px",
